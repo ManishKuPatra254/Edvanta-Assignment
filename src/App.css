@@ -1,0 +1,12 @@
+.CodeMirror {
+    height: 500px !important;
+    /* border: 1px solid firebrick; */
+}
+
+.CodeMirror-gutters {
+    background-color: #1d1e22 !important;
+}
+
+.CodeMirror-scroll {
+    background-color: #1d1e22;
+}

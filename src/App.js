@@ -1,10 +1,13 @@
 import './App.css';
 import { InnerHome } from './InnerHome/InnerHome';
+import { DataContent } from './DataContent/DataContent';
 
 function App() {
   return (
     <div className="App">
-      <InnerHome />
+      <DataContent>
+        <InnerHome />
+      </DataContent>
     </div>
   );
 }
