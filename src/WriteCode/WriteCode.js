@@ -3,14 +3,57 @@ import styles from './WriteCode.module.css';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import MonacoEditor from 'react-monaco-editor';
+import { toast, Toaster } from 'react-hot-toast';
 
 export function WriteCode({ names, iconsChange, color, value, change, language }) {
-    const [editorValue, setEditorValue] = useState(value);
+    const [valueSet, setEvalueSet] = useState(value);
 
     function handleValueChange(newValue) {
         console.log('handleValueChange called with value:', newValue);
-        setEditorValue(newValue);
+        setEvalueSet(newValue);
         change(newValue);
+    }
+
+    function handleSaveButton() {
+        const downloadFile = new Blob([valueSet],
+            { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = window.URL.createObjectURL(downloadFile);
+        a.download = 'code.txt';
+        a.click();
+    }
+
+    function handleCopyClick() {
+        if (valueSet) {
+            navigator.clipboard.writeText(valueSet)
+                .then(() => {
+                    toast('Text copied to clipboard',
+                        {
+                            icon: '✔️',
+                            style: {
+                                borderRadius: '3px',
+                                background: '#333',
+                                color: '#fff',
+                            },
+                        }
+                    );
+                })
+                .catch(err => {
+                    console.error('Failed: ', err);
+                });
+        }
+        else {
+            toast('Empty board',
+                {
+                    icon: '❌',
+                    style: {
+                        borderRadius: '3px',
+                        background: '#333',
+                        color: '#fff',
+                    },
+                }
+            );
+        }
     }
 
     return (
@@ -21,14 +64,10 @@ export function WriteCode({ names, iconsChange, color, value, change, language }
                         <span style={{ backgroundColor: color }}>{iconsChange}</span>
                         {names}
                     </div>
-                    <div className="" style={{
-                        display: 'flex',
-                        padding: '15px',
-                        gap: '15px',
-                        alignItems: 'center'
-                    }}>
-                        <p><SaveAltIcon fontSize='small' /></p>
-                        <p><ContentCopyIcon fontSize='small' /></p>
+                    <div className={styles.icons_pro} >
+                        <p onClick={handleSaveButton}><SaveAltIcon fontSize='small' /></p>
+                        <p onClick={handleCopyClick}><ContentCopyIcon fontSize='small' /></p>
+                        <Toaster />
                     </div>
                 </div>
                 <MonacoEditor
@@ -36,7 +75,7 @@ export function WriteCode({ names, iconsChange, color, value, change, language }
                     height="40vh"
                     language={language}
                     theme="vs-dark"
-                    value={editorValue}
+                    value={valueSet}
                     onChange={handleValueChange}
                     options={{
                         automaticLayout: true,
