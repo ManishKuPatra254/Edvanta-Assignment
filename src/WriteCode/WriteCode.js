@@ -1,15 +1,20 @@
-import React, { Fragment } from 'react'
-import styles from './WriteCode.module.css'
-import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
-import { Controlled as ControlledEditor } from 'react-codemirror2'
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/material.css';
-import 'codemirror/mode/xml/xml'
-import 'codemirror/mode/javascript/javascript'
-import 'codemirror/theme/neat.css';
-import '../App.css';
+import React, { Fragment, useState } from 'react';
+import styles from './WriteCode.module.css';
+import SaveAltIcon from '@mui/icons-material/SaveAlt';
+import MonacoEditor from 'react-monaco-editor';
 
-export function WriteCode({ names, iconsChange, color }) {
+
+
+export function WriteCode({ names, iconsChange, color, value, change, language }) {
+    const [editorValue, setEditorValue] = useState(value);
+
+    function handleValueChange(newValue) {
+        console.log('handleValueChange called with value:', newValue);
+        setEditorValue(newValue);
+        change(newValue);
+    }
+
+
     return (
         <Fragment>
             <div className={styles.main_write_code}>
@@ -18,17 +23,28 @@ export function WriteCode({ names, iconsChange, color }) {
                         <span style={{ backgroundColor: color }}>{iconsChange}</span>
                         {names}
                     </div>
-                    <p><CloseFullscreenIcon /></p>
+                    <div className="" style={{
+                        display: 'flex',
+                        padding: '5px',
+                        gap: '20px',
+                        alignItems: 'center'
+                    }}>
+                        <p><SaveAltIcon fontSize='small' /></p>
+                        <p><SaveAltIcon fontSize='small' /></p>
+                    </div>
                 </div>
-                <ControlledEditor className='CodeMirror'
-
+                <MonacoEditor
+                    width="100%"
+                    height="40vh"
+                    language={language}
+                    theme="vs-dark"
+                    value={editorValue}
+                    onChange={handleValueChange}
                     options={{
-                        theme: 'material',
-                        lineNumbers: true
+                        automaticLayout: true,
                     }}
-
                 />
             </div>
         </Fragment>
-    )
+    );
 }

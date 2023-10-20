@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { createContext } from 'react'
-const DataListener = createContext();
+export const DataListener = createContext(null);
 
 export function DataContent({ children }) {
     const [dataHtml, setDatahtml] = useState('')

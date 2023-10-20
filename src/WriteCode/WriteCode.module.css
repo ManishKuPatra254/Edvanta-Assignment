@@ -1,10 +1,19 @@
-.main_write_code{
+.main_write_code {
     flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    background-color: rgb(54, 54, 54);
+}
+
+.new_main{
+    flex-grow: 0;
 }
 
 .sub_tags {
     display: flex;
-    background-color: #1d1e22;
+    background-color: #151516;
     justify-content: space-between;
 }
 
@@ -34,4 +43,3 @@
     padding-bottom: 5px;
     border-radius: 5px;
 }
-
