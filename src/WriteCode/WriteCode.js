@@ -1,9 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import styles from './WriteCode.module.css';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import MonacoEditor from 'react-monaco-editor';
-
-
 
 export function WriteCode({ names, iconsChange, color, value, change, language }) {
     const [editorValue, setEditorValue] = useState(value);
@@ -13,7 +12,6 @@ export function WriteCode({ names, iconsChange, color, value, change, language }
         setEditorValue(newValue);
         change(newValue);
     }
-
 
     return (
         <Fragment>
@@ -25,12 +23,12 @@ export function WriteCode({ names, iconsChange, color, value, change, language }
                     </div>
                     <div className="" style={{
                         display: 'flex',
-                        padding: '5px',
-                        gap: '20px',
+                        padding: '15px',
+                        gap: '15px',
                         alignItems: 'center'
                     }}>
                         <p><SaveAltIcon fontSize='small' /></p>
-                        <p><SaveAltIcon fontSize='small' /></p>
+                        <p><ContentCopyIcon fontSize='small' /></p>
                     </div>
                 </div>
                 <MonacoEditor

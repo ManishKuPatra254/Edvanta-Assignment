@@ -19,7 +19,8 @@ export function Editor() {
                     value={dataCss}
                     change={setDatacss}
                     language="css" />
-                <WriteCode names='JAVASCRIPT'
+                    
+                <WriteCode names='JS'
                     iconsChange='﹙﹚'
                     color=' #ffc500'
                     value={dataJavascript}

@@ -15,7 +15,7 @@ export function FinalOut() {
 
     return (
         <Fragment>
-            <div className="">
+            <div style={{ height: '45vh' }}>
                 <iframe srcDoc={simpleDataInput}
                     title='Output'
                     sandbox='allow-scripts'
