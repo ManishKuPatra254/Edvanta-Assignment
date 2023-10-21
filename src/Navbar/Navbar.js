@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Fragment } from 'react'
 import { AppBar, Button } from '@mui/material'
 import { Toolbar } from '@mui/material'
@@ -6,6 +6,11 @@ import image1 from '../Images/20.png'
 import styles from './Navbar.module.css'
 
 export function Navbar() {
+    const [toogleLock, setToogleLock] = useState(false)
+
+    function handleClickLockToogle() {
+        setToogleLock(!toogleLock)
+    }
     return (
         <Fragment>
             <AppBar sx={{
@@ -27,7 +32,7 @@ export function Navbar() {
                         fontWeight: '900',
                         fontSize: '19px',
                         ":hover": { backgroundColor: 'white' }
-                    }} variant='contained'>Lock</Button>
+                    }} variant='contained' onClick={handleClickLockToogle}>{!toogleLock ? 'Lock' : 'Unlock'}</Button>
                 </Toolbar>
             </AppBar>
         </Fragment>
