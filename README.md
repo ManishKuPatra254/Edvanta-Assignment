@@ -1,6 +1,6 @@
 # Code Point
 
-Code Point is a minimalistic code editor designed for basic code editing tasks. It is built using React Js , Monaco Editor , Material Ui and can be run in a web browser. This is a very basic code editor
+Code Point is a minimalistic code editor designed for basic code editing tasks. It is built using React Js , Material Ui and can be run in a web browser. This is a very basic code editor
 
 # Features 
 
