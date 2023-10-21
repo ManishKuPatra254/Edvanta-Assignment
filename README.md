@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Code Point
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Code Point is a minimalistic code editor designed for basic code editing tasks. It is built using React Js , Monaco Editor , Material Ui and can be run in a web browser. This is a very basic code editor
 
-## Available Scripts
+# Features 
 
-In the project directory, you can run:
+1. Text based code editor.
+2. Save and downlaod files as .txt file in your pc.
+3. Simple interface for code editing.
 
-### `npm start`
+# Installation ...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run this website follow the steps ...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository
+2. Download all the dependencies (if not present)
+3. Go to VS code and click on terminal
+4. Run a command (npm start)
+5. See the result ✌️
 
-### `npm test`
+<h1> Requirements </h1>
+<ul>
+  <li>React-JS</li>
+   <li>Material UI</li>
+   <li>Material UI Icons</li>
+   <li>Monaco Editoe</li>
+   <li>React Hot Toast</li>
+</ul>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Screenshots ...
 
-### `npm run build`
+![Screenshot 2023-10-21 224228](https://github.com/ManishKuPatra254/Edvanta-Assignment/assets/112771729/45eed40f-606d-4770-a6e5-f36e389a4471)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Screenshot 2023-10-21 224542](https://github.com/ManishKuPatra254/Edvanta-Assignment/assets/112771729/2d7d039c-9355-42b5-b9ed-6ea4a12035be)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screenshot 2023-10-21 224759](https://github.com/ManishKuPatra254/Edvanta-Assignment/assets/112771729/f812e76c-3043-41b1-b07d-47b491fbe129)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Code downloaded to PC
 
-### `npm run eject`
+![Screenshot 2023-10-21 225023](https://github.com/ManishKuPatra254/Edvanta-Assignment/assets/112771729/cf1a71c4-87fa-4676-9473-29ea9621d9ed)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Screenshot 2023-10-21 224858](https://github.com/ManishKuPatra254/Edvanta-Assignment/assets/112771729/be3c270d-1017-4dd2-8e02-4ca1b4686523)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Copied to Clipboard
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Screenshot 2023-10-21 225137](https://github.com/ManishKuPatra254/Edvanta-Assignment/assets/112771729/70797261-0f52-4275-8779-13e4669d887b)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
